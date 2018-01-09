@@ -1,7 +1,11 @@
 package ie.gmit.sw;
 
 public class Runner {
-	
-	//test
- 
+
+  public static void main(String[] args)
+  {
+	  
+	  new Menu().show();
+	 
+  }
 }
