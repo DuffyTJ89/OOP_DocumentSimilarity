@@ -5,6 +5,10 @@ public class Shingle {
 	private int docId;
 	private int hashcode;
 	
+	public Shingle()
+	{
+		
+	}
 	
 	public int getDocId() {
 		return docId;
