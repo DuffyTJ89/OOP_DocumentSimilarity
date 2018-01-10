@@ -15,7 +15,16 @@ public class Launcher {
 		
 		BlockingQueue<Shingle> queue = new LinkedBlockingDeque<>();
 		
-		DocToShingle shingleCreator = new DocToShingle();
+		DocToShingle shingleCreator1 = new DocToShingle(document1, 3, queue);
+		DocToShingle shingleCreator2 = new DocToShingle(document2, 3, queue);
+		
+		
+		Thread t1 = new Thread(shingleCreator1);
+		t1.start();
+		Thread t2 = new Thread(shingleCreator2);
+		t2.start();
+		
+		//System.out.println(queue.size());
 		
 	}
 

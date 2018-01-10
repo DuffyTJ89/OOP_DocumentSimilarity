@@ -1,13 +1,17 @@
 package ie.gmit.sw;
 
+import java.util.Collection;
+
 public class Shingle {
 
 	private int docId;
 	private int hashcode;
 	
-	public Shingle()
+	public Shingle(Collection<String> words, int docI)
 	{
-		
+		String allWorlds = String.join(" ", words).toLowerCase();
+        hashcode = allWorlds.hashCode();
+        this.docId = docId;
 	}
 	
 	public int getDocId() {

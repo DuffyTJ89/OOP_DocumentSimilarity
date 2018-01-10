@@ -11,17 +11,18 @@ public class DocParser implements Document{
 	
 	public DocParser(String path) throws IOException {
         this.path = path;
-
+        System.out.println("DocParser : Path = " + path);
+        
         BufferedReader reader = new BufferedReader(new FileReader(path));
         
-        StringBuilder sb = new StringBuilder(); // String builder because it only builds once. += you recreate the string each and every time
+        StringBuilder sb = new StringBuilder(); //String builder because it only builds once. += you recreate the string each and every time
         String line; // temporary variable to hold each line.
         while((line = reader.readLine()) != null){
             sb.append(line);
             //System.out.println(line);
         }
         text = sb.toString();
-
+        //System.out.println(text);
     }
 
 	
@@ -29,7 +30,7 @@ public class DocParser implements Document{
 	@Override
 	public String getText() {
 		// TODO Auto-generated method stub
-		return null;
+		return text;
 	}
 
 	@Override
