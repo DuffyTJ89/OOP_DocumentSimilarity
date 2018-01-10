@@ -1,6 +1,8 @@
 package ie.gmit.sw;
 
 import java.io.IOException;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
 
 public class Launcher {
 	
@@ -11,6 +13,9 @@ public class Launcher {
 		Document document1 = new DocParser(doc1);
 		Document document2 = new DocParser(doc2);
 		
+		BlockingQueue<Shingle> queue = new LinkedBlockingDeque<>();
+		
+		DocToShingle shingleCreator = new DocToShingle();
 		
 	}
 
