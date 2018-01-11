@@ -2,30 +2,34 @@ package ie.gmit.sw;
 
 import java.util.Collection;
 
-public class Shingle {
+public class Shingle 
+{
 
 	private int docId;
 	private int hashcode;
 	
-	public Shingle(Collection<String> words, int docI)
+	public Shingle(Collection<String> words, int docI) //create a collection to store the words for the shingle
 	{
 		String allWorlds = String.join(" ", words).toLowerCase();
         hashcode = allWorlds.hashCode();
         this.docId = docId;
 	}
 	
-	public int getDocId() {
+	public int getDocId() 
+	{
 		return docId;
 	}
-	public void setDocId(int docId) {
+	public void setDocId(int docId) 
+	{
 		this.docId = docId;
 	}
-	public int getHashcode() {
+	public int getHashcode() 
+	{
 		return hashcode;
 	}
-	public void setHashcode(int hashcode) {
+	public void setHashcode(int hashcode) 
+	{
 		this.hashcode = hashcode;
 	}
 	
-//	
-}
+}//end shingle class

@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 
-public class Launcher {
+public class Launcher 
+{
 	
 	public void launch(String doc1, String doc2) throws IOException
 	{
@@ -26,6 +27,6 @@ public class Launcher {
 		
 		//System.out.println(queue.size());
 		
-	}
+	}//end launch
 
-}
+}//end 

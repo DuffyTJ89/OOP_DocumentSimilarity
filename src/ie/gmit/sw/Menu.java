@@ -3,13 +3,17 @@ package ie.gmit.sw;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Menu {
+public class Menu 
+{
 
-	public void show() throws IOException {
+	public void show() throws IOException 
+	{
 		System.out.println("*** Document Comparison Service ***");
 		
 		
 		Scanner userInput = new Scanner(System.in);
+		
+		System.out.println("Enter the file with path to directory where file is stored, e.g docsForChecking/Yeats.txt");
 		
 		System.out.println("Enter file name 1");
 		String doc1 = userInput.next();
@@ -20,5 +24,5 @@ public class Menu {
 		System.out.println("Processing.. Please wait");
 		
 		new Launcher().launch(doc1, doc2);
-	}
-}
+	}//end shpw()
+}//end menu
